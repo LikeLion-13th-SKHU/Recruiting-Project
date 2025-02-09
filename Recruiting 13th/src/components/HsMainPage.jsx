@@ -2,6 +2,11 @@ import styled from "styled-components";
 import useCountdown from "../Hooks/useCountdown";
 import { useMemo, useCallback } from "react";
 
+const MainPageContainer = styled.div`
+  justify-content: center;
+  align-items: center;
+  margin-left: 25rem;
+`;
 const MainPageTitle = styled.div`
   font-size: 7rem;
   font-weight: bolder;
@@ -28,16 +33,12 @@ const MainPic = styled.div`
   top: -18rem;
   left: 35rem;
 `;
-const MainContainer = styled.div`
-  width: 80%;
-  position: relative;
-  left: 15%;
-`;
+
 const ApplyDiv = styled.div`
   display: flex;
   border-radius: 10px;
-  width: 25%;
-  height: 8vh;
+  width: 14rem;
+  height: 5rem;
   background-color: #20be37;
   justify-content: center;
   align-items: center;
@@ -49,10 +50,20 @@ const ApplyDivLetter = styled.span`
   font-weight: bold;
 `;
 const Timer = styled.div`
-  display: inline-block;
-  color: #20be37;
+  background-color: #ff7710;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 8rem;
+  height: 3vh;
+  border-radius: 5px;
+  margin: 1px;
   font-size: 1rem;
   font-weight: bold;
+  position: relative;
+  left: 20rem;
+  top: -3rem;
 `;
 const HsMainPage = () => {
   const targetDate = useMemo(() => new Date("2025-02-28T23:59:59"), []);
@@ -60,7 +71,7 @@ const HsMainPage = () => {
 
   return (
     <>
-      <MainContainer>
+      <MainPageContainer>
         <MainPageSubTitle>&nbsp; Growl To Growth</MainPageSubTitle>
         <MainPageTitle>
           멋쟁이
@@ -74,7 +85,7 @@ const HsMainPage = () => {
         <Timer>
           {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
         </Timer>
-      </MainContainer>
+      </MainPageContainer>
     </>
   );
 };
