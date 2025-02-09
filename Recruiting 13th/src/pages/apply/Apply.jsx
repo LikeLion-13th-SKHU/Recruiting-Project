@@ -1,5 +1,11 @@
+import HsMainPage from "../../components/HsMainPage";
+
 const Apply = () => {
-  return <div>apply</div>;
+  return (
+    <div>
+      <HsMainPage />
+    </div>
+  );
 };
 
 export default Apply;
