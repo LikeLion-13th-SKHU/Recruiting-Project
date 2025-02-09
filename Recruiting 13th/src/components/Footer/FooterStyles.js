@@ -15,6 +15,7 @@ export const FooterContainer = styled.footer `
 export const Section = styled.div `
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 `;
 
@@ -24,10 +25,12 @@ export const Title = styled.h3 `
   background-color: rgba(32, 190, 55, 0.2);
   padding: 5px 10px;
   border-radius: 5px;
-  font-weight: bold;
+  font-weight: bolder;
   color: #20be37;
   margin-bottom: 5px;
 `;
+
+export const ContactItemWrapper = styled.div ``;
 
 export const NameSection = styled.div `
   margin-top: 10px;
@@ -44,4 +47,11 @@ export const ContactItem = styled.div `
   gap: 10px;
   font-size: 1rem;
   cursor: pointer;
+  margin-bottom: 10px;
+`;
+
+export const ContactItemTitle = styled.div `
+  width: 70px;
+  margin-left: -7px;
+  font-weight: bolder;
 `;
