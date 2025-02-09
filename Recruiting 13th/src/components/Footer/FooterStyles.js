@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled.footer `
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,24 +12,27 @@ export const FooterContainer = styled.footer`
   }
 `;
 
-export const Section = styled.div`
+export const Section = styled.div `
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h3 `
   text-align: center;
   width: 100px;
-  background-color: rgba(32, 190, 55, 0.3);
+  background-color: rgba(32, 190, 55, 0.2);
   padding: 5px 10px;
   border-radius: 5px;
-  font-weight: bold;
+  font-weight: bolder;
   color: #20be37;
   margin-bottom: 5px;
 `;
 
-export const NameSection = styled.div`
+export const ContactItemWrapper = styled.div ``;
+
+export const NameSection = styled.div `
   margin-top: 10px;
   padding: 15px;
 
@@ -38,10 +41,17 @@ export const NameSection = styled.div`
   }
 `;
 
-export const ContactItem = styled.div`
+export const ContactItem = styled.div `
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 1rem;
   cursor: pointer;
+  margin-bottom: 10px;
+`;
+
+export const ContactItemTitle = styled.div `
+  width: 70px;
+  margin-left: -7px;
+  font-weight: bolder;
 `;

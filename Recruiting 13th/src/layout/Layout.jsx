@@ -1,18 +1,18 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 import { Outlet } from "react-router-dom";
-import { LayoutWrapper, ContentWrapper, Main } from "./LayoutStyle";
+import * as S from "./LayoutStyle";
 const Layout = () => {
   return (
-    <LayoutWrapper>
+    <S.LayoutWrapper>
       <Header />
-      <ContentWrapper>
-        <Main>
+      <S.ContentWrapper>
+        <S.Main>
           <Outlet />
-        </Main>
-      </ContentWrapper>
+        </S.Main>
+      </S.ContentWrapper>
       <Footer />
-    </LayoutWrapper>
+    </S.LayoutWrapper>
   );
 };
 
