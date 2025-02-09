@@ -38,6 +38,7 @@ export const NameSection = styled.div `
 
   div {
     margin: 12px 15px;
+    font-weight: bolder;
   }
 `;
 
