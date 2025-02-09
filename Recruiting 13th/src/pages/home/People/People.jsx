@@ -9,23 +9,46 @@ const People = () => {
       </S.TitleContainer>
 
       <S.ContentContainer>
-        <S.ContentTitle>Frontend</S.ContentTitle>
-        <S.ContentNameWrapper>
-          <S.Name>박예은&nbsp;&nbsp;&nbsp;&nbsp;백하윤</S.Name>
-          <S.Name>양라윤&nbsp;&nbsp;&nbsp;&nbsp;윤현승</S.Name>
-        </S.ContentNameWrapper>
+        {/* Frontend */}
+        <S.PartWrapper>
+          <S.ContentTitle>Frontend</S.ContentTitle>
+          <S.FrontNameWrapper>
+            <S.TopWrapper>
+              <S.Name>박예은</S.Name>
+              <S.Name>백하윤</S.Name>
+            </S.TopWrapper>
+            <S.BottomWrapper>
+              <S.Name>양라윤</S.Name>
+              <S.Name>윤현승</S.Name>
+            </S.BottomWrapper>
+          </S.FrontNameWrapper>
+        </S.PartWrapper>
 
         <S.ColumnBar />
 
-        <S.ContentTitle>Backend</S.ContentTitle>
-        <S.ContentNameWrapper>
-          <S.Leader
-            src='../../../../public/images/대표.png'
-            alt='대표'
-          />
-          <S.Name>안준영&nbsp;박세은&nbsp;유하영</S.Name>
-          <S.Name>이예은&nbsp;정다운&nbsp;조규림</S.Name>
-        </S.ContentNameWrapper>
+        {/* Backend */}
+        <S.PartWrapper>
+          <S.ContentTitle>Backend</S.ContentTitle>
+
+          <S.BackNameWrapper>
+            <S.TopWrapper>
+              <S.Name>
+                <S.LeaderBadge
+                  src='../../../../public/images/대표.png'
+                  alt='대표'
+                />
+                안준영
+              </S.Name>
+              <S.Name>박세은</S.Name>
+              <S.Name>유하영</S.Name>
+            </S.TopWrapper>
+            <S.BottomWrapper>
+              <S.Name>이예은</S.Name>
+              <S.Name>정다운</S.Name>
+              <S.Name>조규림</S.Name>
+            </S.BottomWrapper>
+          </S.BackNameWrapper>
+        </S.PartWrapper>
       </S.ContentContainer>
     </S.PeopleContainer>
   );
