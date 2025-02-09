@@ -37,6 +37,9 @@ const Main = () => {
       <S.MainImg
         src='../../../../public/images/멋사 로고.png'
         as={motion.img}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         style={{
           scale,
           opacity: imgOpacity,
