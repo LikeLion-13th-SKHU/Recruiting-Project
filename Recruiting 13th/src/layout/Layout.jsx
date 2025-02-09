@@ -5,7 +5,9 @@ import * as S from "./LayoutStyle";
 const Layout = () => {
   return (
     <S.LayoutWrapper>
-      <Header />
+      <S.HeaderWrapper>
+        <Header />
+      </S.HeaderWrapper>
       <S.ContentWrapper>
         <S.Main>
           <Outlet />

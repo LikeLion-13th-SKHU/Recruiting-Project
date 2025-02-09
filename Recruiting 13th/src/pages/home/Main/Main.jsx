@@ -1,5 +1,7 @@
+import * as S from "./MainStyles";
+
 const Main = () => {
-  return <div>Main</div>;
+  return <S.MainContainer>Main</S.MainContainer>;
 };
 
 export default Main;

@@ -1,5 +1,7 @@
+import * as S from "./AboutStyles";
+
 const About = () => {
-  return <div>About</div>;
+  return <S.AboutContainer>About</S.AboutContainer>;
 };
 
 export default About;

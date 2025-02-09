@@ -1,5 +1,6 @@
+import * as S from "./TimelineStyles";
 const Timeline = () => {
-  return <div>Timeline</div>;
+  return <S.TimelineContainer>Timeline</S.TimelineContainer>;
 };
 
 export default Timeline;
