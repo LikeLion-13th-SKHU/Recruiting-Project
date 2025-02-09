@@ -5,5 +5,5 @@ export const HomeWrapper = styled.div `
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  // 위 3개 기본 적용 스타일
+  // 위 4개 기본 적용 스타일
 `;
