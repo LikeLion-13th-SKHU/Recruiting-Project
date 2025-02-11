@@ -41,7 +41,7 @@ export const AboutBtnContainer = styled.div `
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  width: 600px;
+  width: 35%;
   margin-top: 50px;
 `;
 
@@ -61,7 +61,7 @@ export const AboutBtn = styled.div `
 `;
 
 export const AboutContentContainer = styled.div `
-  width: 900px;
+  width: 50%;
   background-color: rgba(32, 190, 55, 0.05);
   border-radius: 20px;
   height: 300px;
