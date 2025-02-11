@@ -1,5 +1,39 @@
+import { useState } from "react";
+import * as S from "./CurriculumStyles";
+
+const tracks = [
+  {
+    name: "프론트엔드",
+    content: <img src="/images/frontend.png" width="600" />,
+  },
+  {
+    name: "백엔드",
+    content: <img src="/images/backend.png" width="600" />,
+  },
+];
+
 const Curriculum = () => {
-  return <div>curriculum</div>;
+  const [selectedTrack, setSelectedTrack] = useState(0);
+
+  return (
+    <S.CurriculumWrapper>
+      <S.Title>커리큘럼</S.Title>
+      <S.RowBar />
+      <S.BtnContainer>
+        {tracks.map((track, index) => (
+          <S.Btn
+            key={index}
+            onClick={() => setSelectedTrack(index)}
+            isActive={selectedTrack === index}
+          >
+            {track.name}
+          </S.Btn>
+        ))}
+      </S.BtnContainer>
+
+      <S.Image>{tracks[selectedTrack].content}</S.Image>
+    </S.CurriculumWrapper>
+  );
 };
 
 export default Curriculum;
