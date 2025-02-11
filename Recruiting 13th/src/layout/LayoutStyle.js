@@ -21,8 +21,8 @@ export const ContentWrapper = styled.div `
   align-items: center;
   flex: 1;
   /* max-width: 1280px; */
-  padding-top: 66px;
-  padding-bottom: 80px;
+  /* padding-top: 66px; */
+  /* padding-bottom: 80px; */
 `;
 
 export const Main = styled.main `
