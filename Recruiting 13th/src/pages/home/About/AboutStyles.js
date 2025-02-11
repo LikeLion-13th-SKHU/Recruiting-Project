@@ -40,7 +40,8 @@ export const AboutBtnContainer = styled.div `
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 35%;
+  gap: 20px;
+  width: 600px;
   margin-top: 50px;
 `;
 
@@ -60,13 +61,14 @@ export const AboutBtn = styled.div `
 `;
 
 export const AboutContentContainer = styled.div `
-  width: 55%;
+  width: 900px;
   background-color: rgba(32, 190, 55, 0.05);
   border-radius: 20px;
   height: 300px;
   display: flex;
   gap: 5%;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  margin: 10px;
 `;
 
 export const AboutContentImg = styled.img `
