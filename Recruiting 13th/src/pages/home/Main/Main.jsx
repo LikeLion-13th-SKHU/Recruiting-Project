@@ -35,7 +35,7 @@ const Main = () => {
   return (
     <S.MainContainer>
       <S.MainImg
-        src='../../../../public/images/멋사 로고.png'
+        src='/images/멋사 로고.png'
         as={motion.img}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1.2 }}

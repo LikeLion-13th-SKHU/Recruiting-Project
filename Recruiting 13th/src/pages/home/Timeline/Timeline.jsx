@@ -7,7 +7,7 @@ const Timeline = () => {
         <S.Title>타임라인</S.Title>
         <S.RowBar />
       </S.TitleContainer>
-      <S.TimelineImgContainer src='../../../../public/images/timeline.png' />
+      <S.TimelineImgContainer src='/images/timeline.png' />
     </S.TimelineContainer>
   );
 };
