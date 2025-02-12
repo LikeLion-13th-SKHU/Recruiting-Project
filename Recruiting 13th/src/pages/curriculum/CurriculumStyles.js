@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../styles/Media";
 
 export const CurriculumWrapper = styled.div`
   padding: 0 20px;
@@ -8,23 +9,41 @@ export const CurriculumWrapper = styled.div`
 
   margin-top: 66px;
   margin-bottom: 80px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   gap: 30px;
+
+  ${media.tablet} {
+  }
+
+  ${media.mobile} {
+    margin-bottom: 0;
+  }
 `;
 
 export const Title = styled.div`
   font-size: 35px;
-  font-weight: bolder;
+
+  ${media.tablet} {
+    font-size: 30px;
+  }
+  ${media.mobile} {
+    font-size: 20px;
+  }
 `;
 
 export const RowBar = styled.div`
   width: 250px;
   border-top: 1px solid black;
+
+  ${media.tablet} {
+    font-size: 30px;
+  }
+  ${media.mobile} {
+    width: 150px;
+  }
 `;
 
 export const BtnContainer = styled.div`
@@ -47,6 +66,28 @@ export const Btn = styled.div`
   background-color: ${({ isActive }) =>
     isActive ? "#20be37" : "rgba(255, 119, 16, 0.1)"};
   color: ${({ isActive }) => (isActive ? "white" : "black")};
+
+  ${media.mobile} {
+    margin: 6px;
+    font-size: 13px;
+    border-radius: 10px;
+    width: 75px;
+    height: 25px;
+  }
 `;
 
-export const Image = styled.div``;
+export const Image = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 80%;
+  }
+
+  ${media.mobile} {
+    img {
+      max-width: 90%;
+    }
+  }
+`;

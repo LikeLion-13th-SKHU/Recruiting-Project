@@ -4,11 +4,11 @@ import * as S from "./CurriculumStyles";
 const tracks = [
   {
     name: "프론트엔드",
-    content: <img src="/images/frontend.png" width="600" />,
+    content: <img src="/images/frontend.png" />,
   },
   {
     name: "백엔드",
-    content: <img src="/images/backend.png" width="600" />,
+    content: <img src="/images/backend.png" />,
   },
 ];
 
