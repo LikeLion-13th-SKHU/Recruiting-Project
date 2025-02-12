@@ -139,7 +139,7 @@ export const AboutContentContainer = styled.div `
 
   ${media.mobile} {
     width: 330px;
-    height: 160px;
+    height: 145px;
   }
 `;
 
@@ -155,7 +155,7 @@ export const AboutContentImg = styled.img `
   }
 
   ${media.mobile} {
-    height: 160px;
+    height: 145px;
   }
 `;
 export const AboutContentTxtWrapper = styled.div `
