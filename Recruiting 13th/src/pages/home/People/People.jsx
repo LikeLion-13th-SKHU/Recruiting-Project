@@ -34,7 +34,7 @@ const People = () => {
             <S.TopWrapper>
               <S.Name>
                 <S.LeaderBadge
-                  src='/images/대표.png'
+                  src='/images/leader.png'
                   alt='대표'
                 />
                 안준영

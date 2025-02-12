@@ -195,18 +195,18 @@ export const LeaderWrapper = styled.div`
 
 export const LeaderBadge = styled.img`
   position: absolute;
-  top: -45px;
+  top: -35px;
   left: 50%;
-  transform: translateX(-50%); /* 중앙 정렬 */
+  transform: translateX(-50%);
   width: 50px;
 
   ${media.tablet} {
     width: 40px;
-    top: -35px;
+    top: -25px;
   }
 
   ${media.mobile} {
     width: 30px;
-    top: -30px;
+    top: -23px;
   }
 `;
