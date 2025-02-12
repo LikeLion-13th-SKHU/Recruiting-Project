@@ -10,12 +10,12 @@ const Header = () => {
       <S.Logo
         src='/images/logo.png'
         alt='로고'
-        onClick={() => navigate("/")} // 새로고침 없이 홈으로 이동
+        onClick={() => (window.location.href = "/")} // 새로고침 발생->사자 애니메이션 때문에 새로고침 필요함
       />
       <S.Item>
         <ul>
           <S.Link
-            onClick={() => navigate("/")}
+            onClick={() => (window.location.href = "/")}
             style={{
               color: location.pathname === "/" ? "#20BE37" : "inherit",
               fontWeight: location.pathname === "/" ? "bolder" : "normal",
@@ -23,7 +23,7 @@ const Header = () => {
             About
           </S.Link>
           <S.Link
-            onClick={() => navigate("/project")}
+            onClick={() => navigate("/project")} // 새로고침 없이 홈으로 이동
             style={{
               color: location.pathname === "/project" ? "#20BE37" : "inherit",
               fontWeight:
