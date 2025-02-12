@@ -33,7 +33,7 @@ export const TitleContainer = styled.div `
 
 export const Title = styled.div `
   font-size: 50px;
-  font-weight: bolder;
+  font-family: "Pretendard-Bold";
 
   ${media.tablet} {
     font-size: 40px;
@@ -173,6 +173,7 @@ export const AboutContentTxtWrapper = styled.div `
 export const AboutContentTxtTitle = styled.div `
   font-size: 25px;
   font-weight: 1000;
+  font-family: "Pretendard-Bold";
 
   ${media.tablet} {
     font-size: 18px;

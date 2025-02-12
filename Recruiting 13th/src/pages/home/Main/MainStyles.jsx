@@ -41,7 +41,7 @@ export const TextG = styled.div`
 export const TextM1 = styled.div`
   font-size: 120px;
   margin-left: -90px;
-  font-weight: bolder;
+  font-family: "Pretendard-Bold";
 
   ${media.mobile} {
     font-size: 60px;
@@ -60,7 +60,7 @@ export const TextM2Wrapper = styled.div`
 
 export const TextM2 = styled.div`
   font-size: 120px;
-  font-weight: bolder;
+  font-family: "Pretendard-Bold";
 
   ${media.mobile} {
     font-size: 60px;
@@ -71,7 +71,7 @@ export const TextS = styled.div`
   font-size: 35px;
   color: #20be37;
   padding-bottom: 10px;
-  font-weight: bold;
+  font-weight: bolder;
 
   ${media.mobile} {
     font-size: 20px;

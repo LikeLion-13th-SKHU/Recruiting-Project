@@ -35,7 +35,7 @@ export const TitleContainer = styled.div`
 
 export const Title = styled.div`
   font-size: 50px;
-  font-weight: bolder;
+  font-family: "Pretendard-Bold";
 
   ${media.tablet} {
     font-size: 40px;
