@@ -63,7 +63,7 @@ const Timer = styled.div`
   font-variant-numeric: tabular-nums; /* 숫자 간격 고정 */
   position: relative;
   left: 660px;
-  top: -63px;
+  top: -63px; // 합체 커밋용 주석
 `;
 
 const HsMainPage = () => {
