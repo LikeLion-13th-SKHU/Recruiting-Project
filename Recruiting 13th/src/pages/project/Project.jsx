@@ -32,7 +32,8 @@ const projects = [
   },
   {
     title: "RERE",
-    description: "RERE는 재활용 가구를 통해 우리 삶을 환기시키는 서비스입니다.",
+    description:
+      "RERE는 중고 인테리어 제품 거래를 통한 거주환경 개선 및 정신건강 회복 서비스입니다.",
     image: "/images/rere.png",
     team: "김신희, 정다연, 조성수, 윤현승",
   },

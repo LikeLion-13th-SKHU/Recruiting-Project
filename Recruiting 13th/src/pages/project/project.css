@@ -78,3 +78,20 @@
 .slider-button:hover {
   background-color: #236b54;
 }
+
+/* Mobile (max-width: 767px) */
+@media all and (max-width: 767px) {
+  .slider-container {
+    max-width: 90%;
+    padding: 10px 0;
+  }
+
+  .slider-title {
+    font-size: 26px;
+  }
+
+  .slider-button {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
