@@ -13,26 +13,40 @@ export const CurriculumWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 
   ${media.tablet} {
   }
 
   ${media.mobile} {
     margin-bottom: 0;
-    gap: 20px;
+    gap: 5px;
+  }
+`;
+
+export const TitleContainer = styled.div`
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ${media.mobile} {
+    height: 8vh;
   }
 `;
 
 export const Title = styled.div`
   font-size: 40px;
   font-family: "Pretendard-Medium";
+  padding-bottom: 20px;
 
   ${media.tablet} {
     font-size: 30px;
   }
   ${media.mobile} {
     font-size: 20px;
+    padding-bottom: 8px;
   }
 `;
 
@@ -44,7 +58,7 @@ export const RowBar = styled.div`
     font-size: 30px;
   }
   ${media.mobile} {
-    width: 150px;
+    width: 120px;
     border-top: 0.5px solid black;
   }
 `;
@@ -52,6 +66,7 @@ export const RowBar = styled.div`
 export const BtnContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
 `;
 
 export const Btn = styled.div`

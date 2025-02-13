@@ -17,8 +17,10 @@ const Curriculum = () => {
 
   return (
     <S.CurriculumWrapper>
-      <S.Title>커리큘럼</S.Title>
-      <S.RowBar />
+      <S.TitleContainer>
+        <S.Title>커리큘럼</S.Title>
+        <S.RowBar />
+      </S.TitleContainer>
       <S.BtnContainer>
         {tracks.map((track, index) => (
           <S.Btn
