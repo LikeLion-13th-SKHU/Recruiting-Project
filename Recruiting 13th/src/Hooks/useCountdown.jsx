@@ -11,14 +11,22 @@ const useCountdown = (targetDate) => {
     const difference = target - now;
 
     if (difference <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      return { days: "00", hours: "00", minutes: "00", seconds: "00" };
     }
 
     return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / (1000 * 60)) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
+      days: Math.floor(difference / (1000 * 60 * 60 * 24))
+        .toString()
+        .padStart(2, "0"),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24)
+        .toString()
+        .padStart(2, "0"),
+      minutes: Math.floor((difference / (1000 * 60)) % 60)
+        .toString()
+        .padStart(2, "0"),
+      seconds: Math.floor((difference / 1000) % 60)
+        .toString()
+        .padStart(2, "0"),
     };
   }
 

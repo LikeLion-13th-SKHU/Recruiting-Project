@@ -2,9 +2,20 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const QnAContainer = styled.div`
-  margin-top: 25rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  height: 100vh;
+  margin-top: -50px;
+`;
+
+const QuestionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 중앙 정렬 */
   width: 100%;
-  margin-left: 25rem;
 `;
 
 const QuestionButton = styled.button`
@@ -16,10 +27,10 @@ const QuestionButton = styled.button`
   padding-left: 40px;
   background-color: rgba(32, 190, 55, 0.3);
   margin-bottom: 0.5rem;
-  margin-left: -3.2rem;
   border-radius: 8px;
   border: none;
   cursor: pointer;
+
   &:hover {
     background-color: rgba(255, 119, 16, 0.3);
   }
@@ -30,13 +41,17 @@ const AnswerContainer = styled.div`
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   max-height: ${(props) => (props.isOpen ? "160px" : "0")};
   opacity: ${(props) => (props.isOpen ? "1" : "0")};
+  width: 80%; /* 버튼과 같은 크기 */
+  text-align: left;
+  padding-left: 40px;
 `;
 
 const AnswerText = styled.p`
   padding: 10px;
   color: #4b5563;
-  width: 70%;
+  width: 100%;
 `;
+
 const QnATitle = styled.div`
   font-size: 2rem;
   font-weight: bolder;
@@ -44,8 +59,9 @@ const QnATitle = styled.div`
   border-bottom: 3px solid black;
   display: flex;
   justify-content: center;
-  margin-left: 22rem;
-  margin-bottom: 5rem;
+  margin: 0px auto;
+  margin-bottom: 6rem;
+  margin-top: 5rem;
 `;
 
 const HsQnAPage = () => {
@@ -108,14 +124,14 @@ const HsQnAPage = () => {
     <QnAContainer>
       <QnATitle>QnA</QnATitle>
       {qnaList.map((item, index) => (
-        <div key={index}>
+        <QuestionWrapper key={index}>
           <QuestionButton onClick={() => toggleAnswer(index)}>
             {item.question}
           </QuestionButton>
           <AnswerContainer isOpen={openIndex === index}>
             <AnswerText>{item.answer}</AnswerText>
           </AnswerContainer>
-        </div>
+        </QuestionWrapper>
       ))}
     </QnAContainer>
   );

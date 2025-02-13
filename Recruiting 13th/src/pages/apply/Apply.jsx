@@ -7,8 +7,12 @@ import HsQnAPage from "../../components/HsQnAPage";
 const Apply = () => {
   const MainContainer = styled.div`
     width: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    position: relative;
   `;
   return (
     <>
