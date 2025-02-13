@@ -82,7 +82,7 @@ export const Image = styled.div`
   align-items: center;
 
   img {
-    max-width: 80%;
+    max-width: 70%;
   }
 
   ${media.mobile} {
