@@ -20,11 +20,13 @@ export const CurriculumWrapper = styled.div`
 
   ${media.mobile} {
     margin-bottom: 0;
+    gap: 20px;
   }
 `;
 
 export const Title = styled.div`
-  font-size: 35px;
+  font-size: 40px;
+  font-family: "Pretendard-Medium";
 
   ${media.tablet} {
     font-size: 30px;
@@ -43,6 +45,7 @@ export const RowBar = styled.div`
   }
   ${media.mobile} {
     width: 150px;
+    border-top: 0.5px solid black;
   }
 `;
 
@@ -56,11 +59,11 @@ export const Btn = styled.div`
   align-items: center;
   justify-content: center;
 
-  margin: 10px;
-  font-size: 17px;
+  margin: 18px;
+  font-size: 20px;
   border-radius: 10px;
-  width: 100px;
-  height: 35px;
+  width: 120px;
+  height: 40px;
   cursor: pointer;
 
   background-color: ${({ isActive }) =>
@@ -69,7 +72,7 @@ export const Btn = styled.div`
 
   ${media.mobile} {
     margin: 6px;
-    font-size: 13px;
+    font-size: 12px;
     border-radius: 10px;
     width: 75px;
     height: 25px;
