@@ -3,7 +3,6 @@ import styled from "styled-components";
 const ReviewContainer = styled.div`
   justify-content: center;
   display: flex;
-
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -25,7 +24,8 @@ const ReviewDivContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 1rem;
+  gap: 3rem;
+  margin-top: 3rem;
 `;
 const ReviewDiv1 = styled.div`
   background-color: rgba(32, 190, 55, 0.3);
@@ -56,8 +56,7 @@ const ReviewDiv4 = styled.div`
   display: inline-flex;
   width: 20rem;
   height: 16rem;
-  margin: 3rem;
-  margin-left: 17rem;
+
   border-radius: 1rem;
 `;
 const ReviewDiv5 = styled.div`
@@ -65,8 +64,7 @@ const ReviewDiv5 = styled.div`
   display: inline-flex;
   width: 20rem;
   height: 16rem;
-  margin: 3rem;
-  margin-right: 17rem;
+
   border-radius: 1rem;
 `;
 const HsReviewPage = () => {
@@ -78,6 +76,8 @@ const HsReviewPage = () => {
           <ReviewDiv1></ReviewDiv1>
           <ReviewDiv2></ReviewDiv2>
           <ReviewDiv3></ReviewDiv3>
+        </ReviewDivContainer>
+        <ReviewDivContainer>
           <ReviewDiv4></ReviewDiv4>
           <ReviewDiv5></ReviewDiv5>
         </ReviewDivContainer>

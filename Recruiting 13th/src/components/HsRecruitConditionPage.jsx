@@ -12,6 +12,7 @@ const RecruitConditionContainer = styled.div`
 const RecruitConditionDivContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
+  gap: 2rem;
 `;
 const RecruitConditionTitle = styled.div`
   font-size: 2rem;
@@ -26,28 +27,29 @@ const RecruitConditionTitle = styled.div`
 const RecruitConditionDiv1 = styled.div`
   background-color: rgba(32, 190, 55, 0.3);
   display: inline-flex;
-  width: 300px;
-  height: 200px;
+  width: 17.5rem;
+  height: 10rem;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 2rem;
   font-size: 1.6rem;
   font-weight: bold;
   margin-top: 5rem;
   border-radius: 1rem;
   line-height: 150%;
   flex-wrap: wrap;
+  gap: 10rem;
 `;
 const RecruitConditionDiv2 = styled.div`
   background-color: rgba(255, 119, 16, 0.3);
   display: inline-flex;
-  width: 300px;
-  height: 200px;
+  width: 17.5rem;
+  height: 10rem;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
   font-weight: bold;
-  padding: 30px;
+  padding: 2rem;
   margin-top: 5rem;
   border-radius: 1rem;
   line-height: 150%;
@@ -55,9 +57,9 @@ const RecruitConditionDiv2 = styled.div`
 const RecruitConditionDiv3 = styled.div`
   background-color: rgba(32, 190, 55, 0.3);
   display: inline-flex;
-  width: 300px;
-  height: 200px;
-  padding: 30px;
+  width: 17.5rem;
+  height: 10rem;
+  padding: 2rem;
   font-size: 1.6rem;
   align-items: center;
   justify-content: center;
