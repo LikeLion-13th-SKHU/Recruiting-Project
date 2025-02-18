@@ -7,24 +7,13 @@ import HsQnAPage from "../../components/HsQnAPage";
 import media from "../../styles/Media";
 const Apply = () => {
   const MainContainer = styled.div`
-    width: 100%;
-
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    ${media.tablet} {
-      margin-bottom: 100px;
-      height: 100vh;
-      gap: 30px;
-    }
-
-    ${media.mobile} {
-      margin-bottom: 100px;
-      height: 100vh;
-      gap: 0px;
-    }
+    overflow-x: hidden;
   `;
   return (
     <>
