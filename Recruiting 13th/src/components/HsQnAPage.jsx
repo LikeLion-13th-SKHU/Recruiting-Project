@@ -46,14 +46,15 @@ const AnswerContainer = styled.div`
   opacity: ${(props) => (props.isOpen ? "1" : "0")};
   width: 80%; /* 버튼과 같은 크기 */
   text-align: left;
-  padding-left: 40px;
+  padding-left: 0;
+
   ${media.mobile} {
     font-size: 14px;
   }
 `;
 
 const AnswerText = styled.p`
-  padding: 10px;
+  padding: 5px;
   color: #4b5563;
   width: 100%;
 `;
