@@ -1,14 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
-
+import media from "../styles/Media";
 const QnAContainer = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 80%;
-  height: 100vh;
-  margin-top: -50px;
+  width: 80vw;
+  height: 20%;
 `;
 
 const QuestionWrapper = styled.div`
@@ -22,7 +21,7 @@ const QuestionButton = styled.button`
   width: 80%;
   text-align: left;
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 100%;
   padding: 10px;
   padding-left: 40px;
   background-color: rgba(32, 190, 55, 0.3);
@@ -34,16 +33,23 @@ const QuestionButton = styled.button`
   &:hover {
     background-color: rgba(255, 119, 16, 0.3);
   }
+  ${media.mobile} {
+    font-size: 14px;
+    padding: 10px;
+    padding-left: 20px;
+  }
 `;
 
 const AnswerContainer = styled.div`
-  overflow: hidden;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   max-height: ${(props) => (props.isOpen ? "160px" : "0")};
   opacity: ${(props) => (props.isOpen ? "1" : "0")};
   width: 80%; /* 버튼과 같은 크기 */
   text-align: left;
   padding-left: 40px;
+  ${media.mobile} {
+    font-size: 14px;
+  }
 `;
 
 const AnswerText = styled.p`
@@ -61,7 +67,12 @@ const QnATitle = styled.div`
   justify-content: center;
   margin: 0px auto;
   margin-bottom: 6rem;
-  margin-top: 5rem;
+  margin-top: 25vw;
+  ${media.mobile} {
+    margin-bottom: 100px;
+    margin-top: 20rem;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+  }
 `;
 
 const HsQnAPage = () => {

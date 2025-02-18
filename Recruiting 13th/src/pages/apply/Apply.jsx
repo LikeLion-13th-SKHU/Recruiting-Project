@@ -4,15 +4,16 @@ import HsRecruitConditionPage from "../../components/HsRecruitConditionPage";
 import HsReviewPage from "../../components/HsReviewPage";
 import styled from "styled-components";
 import HsQnAPage from "../../components/HsQnAPage";
+import media from "../../styles/Media";
 const Apply = () => {
   const MainContainer = styled.div`
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
     position: relative;
+    overflow-x: hidden;
   `;
   return (
     <>
