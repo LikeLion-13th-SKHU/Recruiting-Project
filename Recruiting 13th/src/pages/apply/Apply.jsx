@@ -21,7 +21,7 @@ const Apply = () => {
         <HsMainPage />
         <HsRecruitDatePage />
         <HsRecruitConditionPage />
-        <HsReviewPage />
+        {/* <HsReviewPage /> */}
         <HsQnAPage />
       </MainContainer>
     </>
