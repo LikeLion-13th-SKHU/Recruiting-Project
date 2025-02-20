@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import media from "../../../styles/Media";
 
 export const MainContainer = styled.div`
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;

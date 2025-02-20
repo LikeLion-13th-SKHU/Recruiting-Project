@@ -10,22 +10,31 @@ const Main = () => {
   useEffect(() => {
     const handleScroll = (event) => {
       const currentScroll = scrollY.get();
+      let deltaY = 0;
+
+      if (event.type === "wheel") {
+        deltaY = event.deltaY * 0.0005;
+      } else if (event.type === "touchmove") {
+        deltaY = event.touches[0].clientY * 0.0005; // 터치 이동 거리 반영
+      }
 
       if (currentScroll < 1) {
         event.preventDefault();
-        scrollY.set(Math.min(currentScroll + event.deltaY * 0.0005, 1));
-        setTextOpacity((prev) => Math.min(prev + event.deltaY * 0.0005, 1));
+        scrollY.set(Math.min(currentScroll + deltaY, 1));
+        setTextOpacity((prev) => Math.min(prev + deltaY, 1));
       }
 
-      if (currentScroll >= 1) {
+      if (scrollY.get() >= 1) {
         setIsFixed(false);
       }
     };
 
     window.addEventListener("wheel", handleScroll, { passive: false });
+    window.addEventListener("touchmove", handleScroll, { passive: false });
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
     };
   }, [scrollY]);
 
@@ -46,7 +55,6 @@ const Main = () => {
           position: isFixed ? "fixed" : "absolute",
         }}
       />
-
       <S.MainTextWrapper style={{ opacity: textOpacity }}>
         <S.TextG>Growl To Growth</S.TextG>
         <S.TextM1>멋쟁이</S.TextM1>
