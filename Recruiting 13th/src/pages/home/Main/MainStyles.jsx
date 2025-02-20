@@ -12,10 +12,14 @@ export const MainContainer = styled.div`
   text-align: center;
   position: relative;
   font-weight: 1000;
+
+  ${media.mobile} {
+    height: 70vh;
+  }
 `;
 
 export const MainImg = styled(motion.img)`
-  width: 65%;
+  width: 60%;
   height: auto;
   transition: position 0.3s ease-out;
   display: flex;
