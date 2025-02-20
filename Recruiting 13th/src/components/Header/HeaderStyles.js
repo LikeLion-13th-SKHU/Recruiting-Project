@@ -61,7 +61,7 @@ export const Item = styled.nav `
   }
 `;
 
-export const Link = styled.li `
+export const Link = styled.div `
   font-size: 1rem;
   cursor: pointer;
   color: black;
