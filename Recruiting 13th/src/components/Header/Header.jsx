@@ -1,23 +1,43 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import * as S from "./HeaderStyles";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    // 메뉴 바깥 클릭 시 닫기
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
+    // 페이지 이동 시 isOpen 닫기
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
-    <S.HeaderSt>
+    <S.HeaderSt ref={menuRef}>
       <S.Logo
-        src="/images/logo.png"
-        alt="로고"
-        onClick={() => (window.location.href = "/")} // 새로고침 발생->사자 애니메이션 때문에 새로고침 필요함
+        src='/images/logo.png'
+        alt='로고'
+        onClick={() => (window.location.href = "/")}
       />
 
       <S.MenuBtn onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+        {isOpen ? <AiOutlineClose size={15} /> : <AiOutlineMenu size={15} />}
       </S.MenuBtn>
 
       <S.Item isOpen={isOpen}>
@@ -27,18 +47,16 @@ const Header = () => {
             style={{
               color: location.pathname === "/" ? "#20BE37" : "inherit",
               fontWeight: location.pathname === "/" ? "bolder" : "normal",
-            }}
-          >
+            }}>
             About
           </S.Link>
           <S.Link
-            onClick={() => navigate("/project")} // 새로고침 없이 홈으로 이동
+            onClick={() => navigate("/project")}
             style={{
               color: location.pathname === "/project" ? "#20BE37" : "inherit",
               fontWeight:
                 location.pathname === "/project" ? "bolder" : "normal",
-            }}
-          >
+            }}>
             프로젝트
           </S.Link>
           <S.Link
@@ -48,8 +66,7 @@ const Header = () => {
                 location.pathname === "/curriculum" ? "#20BE37" : "inherit",
               fontWeight:
                 location.pathname === "/curriculum" ? "bolder" : "normal",
-            }}
-          >
+            }}>
             커리큘럼
           </S.Link>
           <S.Link
@@ -57,8 +74,7 @@ const Header = () => {
             style={{
               color: location.pathname === "/apply" ? "#20BE37" : "inherit",
               fontWeight: location.pathname === "/apply" ? "bolder" : "normal",
-            }}
-          >
+            }}>
             지원하기
           </S.Link>
         </ul>

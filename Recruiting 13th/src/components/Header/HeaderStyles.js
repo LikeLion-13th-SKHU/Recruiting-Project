@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import media from "../../styles/Media";
 
-export const HeaderSt = styled.header`
+export const HeaderSt = styled.header `
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +14,7 @@ export const HeaderSt = styled.header`
   }
 `;
 
-export const Logo = styled.img`
+export const Logo = styled.img `
   height: 20px;
   cursor: pointer;
 
@@ -23,20 +23,20 @@ export const Logo = styled.img`
   }
 `;
 
-export const MenuBtn = styled.button`
+export const MenuBtn = styled.button `
   display: none;
   background: none;
   border: none;
-  font-size: 24px;
+  /* font-size: 24px; */
   cursor: pointer;
 
   ${media.mobile} {
-    margin-top: 5px;
+    /* margin-top: 5px; */
     display: block;
   }
 `;
 
-export const Item = styled.nav`
+export const Item = styled.nav `
   ul {
     display: flex;
     gap: 20px;
@@ -61,7 +61,7 @@ export const Item = styled.nav`
   }
 `;
 
-export const Link = styled.li`
+export const Link = styled.li `
   font-size: 1rem;
   cursor: pointer;
   color: black;
