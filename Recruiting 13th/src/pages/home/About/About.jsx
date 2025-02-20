@@ -4,7 +4,7 @@ import * as S from "./AboutStyles";
 const contents = [
   {
     title: "정기 세션",
-    text: "매주 화, 수요일 6시에 정기 세션을 진행합니다. 총 5번의 공통 세션과 각 파트별 세션을 통해 개발 지식을 학습합니다.",
+    text: "매주 화, 수요일 19시 30분에 정기 세션을 진행합니다. 총 5번의 공통 세션과 각 파트별 세션을 통해 개발 지식을 학습합니다.",
     img: "/images/section.jpeg",
   },
   {
