@@ -37,7 +37,17 @@ const Header = () => {
       />
 
       <S.MenuBtn onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <AiOutlineClose size={15} /> : <AiOutlineMenu size={15} />}
+        {isOpen ? (
+          <AiOutlineClose
+            size={15}
+            color='black'
+          />
+        ) : (
+          <AiOutlineMenu
+            size={15}
+            color='black'
+          />
+        )}
       </S.MenuBtn>
 
       <S.Item isOpen={isOpen}>
