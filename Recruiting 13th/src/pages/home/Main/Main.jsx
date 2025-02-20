@@ -13,9 +13,9 @@ const Main = () => {
       let deltaY = 0;
 
       if (event.type === "wheel") {
-        deltaY = event.deltaY * 0.0005;
+        deltaY = event.deltaY * 0.0003;
       } else if (event.type === "touchmove") {
-        deltaY = event.touches[0].clientY * 0.0005; // 터치 이동 거리 반영
+        deltaY = event.touches[0].clientY * 0.0002; // 터치 이동 거리 반영
       }
 
       if (currentScroll < 1) {
