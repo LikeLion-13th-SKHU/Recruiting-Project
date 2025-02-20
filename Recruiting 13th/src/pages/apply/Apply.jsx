@@ -7,7 +7,6 @@ import HsQnAPage from "../../components/HsQnAPage";
 import media from "../../styles/Media";
 const Apply = () => {
   const MainContainer = styled.div`
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;

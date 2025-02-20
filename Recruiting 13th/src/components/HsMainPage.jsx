@@ -9,11 +9,10 @@ const MainPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  justify-content: center;
+  height: 80vh;
   padding: 2rem;
-  margin-top: 10rem;
   width: 80vw;
-  height: 20%;
   @media (max-width: 768px) {
     padding: 1rem;
     margin-top: 5rem;
@@ -38,11 +37,12 @@ const MainContent = styled.div`
 // MainPageTitle
 const MainPageTitle = styled.div`
   font-family: "Pretendard-Bold";
-  font-size: 6vw;
+  font-size: 100px;
   font-weight: bolder;
   line-height: 6.5vw;
   text-align: start;
   flex: 1;
+  line-height: 105px;
 
   @media (max-width: 1024px) {
     font-size: 8rem;
@@ -56,8 +56,8 @@ const MainPageTitle = styled.div`
 
 // MainPageSubTitle
 const MainPageSubTitle = styled.div`
-  font-size: 1.2rem;
-  height: 3.7rem;
+  font-size: 23px;
+  height: 63px;
   margin-left: 5px;
   font-weight: bold;
   font-family: "Pretendard-Regular";
@@ -65,7 +65,7 @@ const MainPageSubTitle = styled.div`
 
 // MainPageUnivName
 const MainPageUnivName = styled.span`
-  font-size: 1.5rem;
+  font-size: 30px;
   font-weight: bold;
   font-family: "Pretendard-Regular";
   color: #20be37;
@@ -76,8 +76,8 @@ const ApplyContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
-  margin-left: -14rem;
+  margin-top: 50px;
+  /* margin-left: -14rem; */
   flex-wrap: wrap;
   justify-content: center;
   ${media.mobile} {
@@ -111,7 +111,7 @@ const ApplyDiv = styled.div`
 // ApplyDivLetter
 const ApplyDivLetter = styled.span`
   color: white;
-  font-size: 2rem; /* Slightly larger font for clarity */
+  font-size: 30px;
   font-weight: bold;
   @media (max-width: 768px) {
     font-size: 1.6rem;
@@ -140,8 +140,7 @@ const Timer = styled.div`
 
 // MainImage
 const MainImage = styled.img`
-  width: 15vw; /* Adjusted to vw */
-  height: 15vw;
+  width: 35%;
   object-fit: contain;
   flex-shrink: 0;
 
@@ -150,7 +149,7 @@ const MainImage = styled.img`
     height: 12rem;
   }
   @media (max-width: 768px) {
-    width: 25vw; /* Adjusted for smaller screen */
+    width: 25vw;
     height: 25vw;
   }
 `;
@@ -163,14 +162,16 @@ const HsMainPage = () => {
   const now = new Date();
   const isBeforeRelease = now < releaseDate;
 
-  // 현재 시간이 2월 25일 이전이면 2월 25일(지원 시작일)까지 남은 시간, 지나면 3월 12일(서류 마감일)까지 남은 시간
+  // 현재 시간이 2월 25일 이전이면 2월 25일까지 남은 시간, 지나면 3월 12일까지 남은 시간
   const targetDate = isBeforeRelease ? releaseDate : deadlineDate;
   const timeLeft = useCountdown(targetDate);
 
   const handleClick = () => {
-    if (!isBeforeRelease) {
-      window.open("https://www.google.com", "_blank"); // 구글폼 링크로 변경
+    if (now < releaseDate || now > deadlineDate) {
+      alert("지원 기간이 아닙니다.");
+      return;
     }
+    window.open("https://www.google.com", "_blank"); // 구글폼 링크로 변경
   };
 
   return (
@@ -191,12 +192,15 @@ const HsMainPage = () => {
       <ApplyContainer>
         <ApplyDiv
           onClick={handleClick}
-          disabled={isBeforeRelease}
           style={{
-            backgroundColor: isBeforeRelease
-              ? "rgba(32, 190, 55, 0.4)"
-              : "#20be37",
-            cursor: isBeforeRelease ? "not-allowed" : "pointer",
+            backgroundColor:
+              now < releaseDate || now > deadlineDate
+                ? "rgba(32, 190, 55, 0.5)"
+                : "#20be37",
+            cursor:
+              now < releaseDate || now > deadlineDate
+                ? "not-allowed"
+                : "pointer",
           }}>
           <ApplyDivLetter>13기 지원하기!</ApplyDivLetter>
         </ApplyDiv>
