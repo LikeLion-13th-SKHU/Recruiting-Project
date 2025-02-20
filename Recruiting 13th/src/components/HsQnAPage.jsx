@@ -54,6 +54,9 @@ const AnswerText = styled.p`
   opacity: ${(props) => (props.isOpen ? "1" : "0")};
   transition: opacity 0.3s ease-in-out;
   display: ${(props) => (props.isOpen ? "block" : "none")};
+  ${media.mobile} {
+    font-size: 13px;
+  }
 `;
 
 const QnATitle = styled.div`
@@ -165,7 +168,8 @@ const HsQnAPage = () => {
         <QuestionWrapper
           key={index}
           isOpen={openIndex === index}
-          onClick={() => toggleAnswer(index)}>
+          onClick={() => toggleAnswer(index)}
+        >
           <QuestionButton>
             {item.question}
             <IoIosArrowDown />
