@@ -59,44 +59,50 @@ const Project = () => {
   };
 
   return (
-    <div className="slider-container">
-      <h1 className="slider-title">프로젝트</h1>
-      <div className="slider-content">
-        <div className="slider-image-wrapper">
+    <div className='slider-container'>
+      <div className='title-container'>
+        <div className='slider-title'>프로젝트</div>
+        <div className='row-bar'></div>
+      </div>
+      <div className='slider-content'>
+        <div className='slider-image-wrapper'>
           <motion.img
             key={projects[currentIndex].image}
             src={projects[currentIndex].image}
             alt={projects[currentIndex].title}
-            className="slider-image"
+            className='slider-image'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           />
         </div>
-        <div className="slider-text-wrapper">
+        <div className='slider-text-wrapper'>
           <motion.div
             key={currentIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <h2 className="slider-title-text">
+            transition={{ duration: 0.3 }}>
+            <h2 className='slider-title-text'>
               {projects[currentIndex].title}
             </h2>
-            <p className="slider-description">
+            <p className='slider-description'>
               {projects[currentIndex].description}
             </p>
-            <p className="slider-team">팀원: {projects[currentIndex].team}</p>
+            <p className='slider-team'>팀원: {projects[currentIndex].team}</p>
           </motion.div>
         </div>
       </div>
-      <div className="slider-controls">
-        <button onClick={handlePrev} className="slider-button">
+      <div className='slider-controls'>
+        <button
+          onClick={handlePrev}
+          className='slider-button'>
           이전
         </button>
-        <button onClick={handleNext} className="slider-button">
+        <button
+          onClick={handleNext}
+          className='slider-button'>
           다음
         </button>
       </div>

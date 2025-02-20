@@ -69,6 +69,6 @@ export const Link = styled.li `
   transition: 0.2s ease-in-out;
 
   ${media.mobile} {
-    font-size: 12px;
+    font-size: 10px;
   }
 `;
