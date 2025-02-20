@@ -90,7 +90,7 @@ const Project = () => {
             <p className='slider-description'>
               {projects[currentIndex].description}
             </p>
-            <p className='slider-team'>팀원: {projects[currentIndex].team}</p>
+            <p className='slider-team'>{projects[currentIndex].team}</p>
           </motion.div>
         </div>
       </div>

@@ -58,7 +58,8 @@
 
 .slider-title-text {
     font-size: 25px;
-    color: #2d8f6f;
+    font-weight: bolder;
+    color: #20be37;
 }
 
 .slider-description {
@@ -83,14 +84,14 @@
     padding: 8px 15px;
     font-size: 15px;
     color: white;
-    background-color: #2d8f6f;
+    background-color: #20be37;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .slider-button:hover {
-    background-color: #236b54;
+    background-color: #20be37;
 }
 
 
