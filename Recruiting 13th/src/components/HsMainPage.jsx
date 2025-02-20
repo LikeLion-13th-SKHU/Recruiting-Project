@@ -15,7 +15,7 @@ const MainPageContainer = styled.div`
   width: 80vw;
   @media (max-width: 768px) {
     padding: 1rem;
-    margin-top: 5rem;
+    margin-bottom: -28rem;
   }
 `;
 
@@ -29,8 +29,8 @@ const MainContent = styled.div`
   max-width: 800px;
 
   @media (max-width: 1024px) {
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    gap: 0rem;
   }
 `;
 
@@ -43,14 +43,11 @@ const MainPageTitle = styled.div`
   text-align: start;
   flex: 1;
   line-height: 105px;
+  width: 9rem;
 
-  @media (max-width: 1024px) {
-    font-size: 8rem;
-    line-height: 5rem;
-    text-align: center;
-  }
   @media (max-width: 768px) {
-    font-size: 4rem;
+    font-size: 2.5rem;
+    line-height: 2.6rem;
   }
 `;
 
@@ -61,6 +58,11 @@ const MainPageSubTitle = styled.div`
   margin-left: 5px;
   font-weight: bold;
   font-family: "Pretendard-Regular";
+  @media (max-width: 768px) {
+    font-size: 10px;
+    margin-bottom: -2.3rem;
+    margin-left: 3px;
+  }
 `;
 
 // MainPageUnivName
@@ -69,6 +71,9 @@ const MainPageUnivName = styled.span`
   font-weight: bold;
   font-family: "Pretendard-Regular";
   color: #20be37;
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 // ApplyContainer
@@ -78,11 +83,15 @@ const ApplyContainer = styled.div`
   gap: 1rem;
   margin-top: 50px;
   /* margin-left: -14rem; */
-  flex-wrap: wrap;
+
   justify-content: center;
   ${media.mobile} {
-    margin-left: 0;
     font-size: 13px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
   }
 `;
 
@@ -103,8 +112,10 @@ const ApplyDiv = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 50vw;
-    height: 12vw;
+    border-radius: 10px;
+    width: 25vw;
+    height: 6vw;
+    padding: 8px;
   }
 `;
 
@@ -114,7 +125,7 @@ const ApplyDivLetter = styled.span`
   font-size: 30px;
   font-weight: bold;
   @media (max-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 12px;
   }
 `;
 
@@ -133,8 +144,9 @@ const Timer = styled.div`
   font-variant-numeric: tabular-nums;
 
   @media (max-width: 768px) {
-    width: 8rem;
-    font-size: 0.8rem;
+    width: 5rem;
+    height: 1rem;
+    font-size: 8px;
   }
 `;
 
@@ -143,15 +155,6 @@ const MainImage = styled.img`
   width: 35%;
   object-fit: contain;
   flex-shrink: 0;
-
-  @media (max-width: 1024px) {
-    width: 12rem;
-    height: 12rem;
-  }
-  @media (max-width: 768px) {
-    width: 25vw;
-    height: 25vw;
-  }
 `;
 
 const HsMainPage = () => {
@@ -183,10 +186,7 @@ const HsMainPage = () => {
           <br /> 사자처럼
           <MainPageUnivName>SKHU</MainPageUnivName>
         </MainPageTitle>
-        <MainImage
-          src='/images/3D사자 1.png'
-          alt='사진없음'
-        />
+        <MainImage src="/images/3D사자 1.png" alt="사진없음" />
       </MainContent>
 
       <ApplyContainer>
@@ -201,7 +201,8 @@ const HsMainPage = () => {
               now < releaseDate || now > deadlineDate
                 ? "not-allowed"
                 : "pointer",
-          }}>
+          }}
+        >
           <ApplyDivLetter>13기 지원하기!</ApplyDivLetter>
         </ApplyDiv>
         <Timer>

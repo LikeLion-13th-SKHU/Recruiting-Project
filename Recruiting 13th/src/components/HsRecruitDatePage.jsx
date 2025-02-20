@@ -81,11 +81,7 @@ const HsRecruitDatePage = () => {
           <RowBar />
         </TitleContainer>
         <ImgContainer>
-          <img
-            style={{ width: "90%" }}
-            src='/images/re.png'
-            alt='사진없음'
-          />
+          <img style={{ width: "90%" }} src="/images/re.png" alt="사진없음" />
         </ImgContainer>
       </RecruitDateContainer>
     </>
