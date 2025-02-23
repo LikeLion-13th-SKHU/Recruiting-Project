@@ -174,7 +174,7 @@ const HsMainPage = () => {
       alert("지원 기간이 아닙니다.");
       return;
     }
-    window.open("https://www.google.com", "_blank"); // 구글폼 링크로 변경
+    window.open("https://forms.gle/UJfZ9SFuHsrxN8HW9", "_blank"); // 구글폼 링크로 변경
   };
 
   return (
