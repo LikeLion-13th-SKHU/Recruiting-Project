@@ -146,7 +146,7 @@ const Timer = styled.div`
   @media (max-width: 768px) {
     width: 5rem;
     height: 1rem;
-    font-size: 8px;
+    font-size: 5px;
   }
 `;
 
@@ -186,7 +186,10 @@ const HsMainPage = () => {
           <br /> 사자처럼
           <MainPageUnivName>SKHU</MainPageUnivName>
         </MainPageTitle>
-        <MainImage src="/images/3D사자 1.png" alt="사진없음" />
+        <MainImage
+          src='/images/3D사자 1.png'
+          alt='사진없음'
+        />
       </MainContent>
 
       <ApplyContainer>
@@ -201,8 +204,7 @@ const HsMainPage = () => {
               now < releaseDate || now > deadlineDate
                 ? "not-allowed"
                 : "pointer",
-          }}
-        >
+          }}>
           <ApplyDivLetter>13기 지원하기!</ApplyDivLetter>
         </ApplyDiv>
         <Timer>
