@@ -146,7 +146,7 @@ const Timer = styled.div`
   @media (max-width: 768px) {
     width: 5rem;
     height: 1rem;
-    font-size: 5px;
+    font-size: 6px;
   }
 `;
 
