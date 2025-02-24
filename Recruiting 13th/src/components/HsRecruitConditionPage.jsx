@@ -10,7 +10,7 @@ const RecruitConditionContainer = styled.div`
   max-width: 1300px;
   margin-bottom: 300px;
   ${media.mobile} {
-    margin-bottom: 5rem;
+    margin-bottom: 20rem;
   }
 `;
 
@@ -63,9 +63,10 @@ const RecruitConditionDiv = styled.div`
   line-height: 150%;
 
   @media (max-width: 768px) {
-    width: 30vw; /* 모바일에서는 너비 확대 */
-    height: 18vh;
-    font-size: 15px;
+    width: 34vw; /* 모바일에서는 너비 확대 */
+    height: 8vh;
+    font-size: 11px;
+    padding: 7vw;
   }
 `;
 
@@ -111,17 +112,17 @@ const HsRecruitConditionPage = () => {
       </TitleContainer>
 
       <RecruitConditionDivContainer>
-        <RecruitConditionDiv bgColor='rgba(32, 190, 55, 0.2)'>
+        <RecruitConditionDiv bgColor="rgba(32, 190, 55, 0.2)">
           성공회대
           <br />
           <HighlightedText>재학생, 휴학생</HighlightedText>
         </RecruitConditionDiv>
-        <RecruitConditionDiv bgColor='rgba(255, 119, 16, 0.2)'>
+        <RecruitConditionDiv bgColor="rgba(255, 119, 16, 0.2)">
           매주 2회의 정기 세션을 포함한 <br />
           아이디어톤, 해커톤 활동에
           <HighlightedTextO>빠짐없이 참석 가능한 사람</HighlightedTextO>
         </RecruitConditionDiv>
-        <RecruitConditionDiv bgColor='rgba(32, 190, 55, 0.2)'>
+        <RecruitConditionDiv bgColor="rgba(32, 190, 55, 0.2)">
           내 손으로 직접 <br />
           아이디어를 <HighlightedText>실현시키고 싶은 사람</HighlightedText>
         </RecruitConditionDiv>

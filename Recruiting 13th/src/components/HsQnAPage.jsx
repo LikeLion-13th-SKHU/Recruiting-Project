@@ -54,6 +54,9 @@ const AnswerText = styled.p`
   opacity: ${(props) => (props.isOpen ? "1" : "0")};
   transition: opacity 0.3s ease-in-out;
   display: ${(props) => (props.isOpen ? "block" : "none")};
+  ${media.mobile} {
+    font-size: 13px;
+  }
 `;
 
 const QnATitle = styled.div`
@@ -128,7 +131,7 @@ const HsQnAPage = () => {
     {
       question: "Q. 활동 요일이 궁금해요!",
       answer:
-        "A. 매주 화, 수 19시 30분에 진행됩니다. 전체 세션, 파트별 세션으로 진행됩니다. 활동 요일은 추후 변경될 수 있습니다.",
+        "A. 매주 화, 수 19시 30분에 진행됩니다. 전체 세션, 파트별 세션으로 진행됩니다. 활동 요일과 시간은 추후 변경될 수 있습니다.",
     },
     {
       question: "Q. 모집 인원이 어떻게 되나요?",
@@ -165,7 +168,8 @@ const HsQnAPage = () => {
         <QuestionWrapper
           key={index}
           isOpen={openIndex === index}
-          onClick={() => toggleAnswer(index)}>
+          onClick={() => toggleAnswer(index)}
+        >
           <QuestionButton>
             {item.question}
             <IoIosArrowDown />
