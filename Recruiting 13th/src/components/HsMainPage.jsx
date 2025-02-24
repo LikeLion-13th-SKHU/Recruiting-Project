@@ -128,7 +128,7 @@ const Timer = styled.div`
   width: 9rem;
   height: 3rem;
   border-radius: 1rem;
-  font-size: 0.9rem;
+  font-size: 13px;
   font-weight: bold;
   font-variant-numeric: tabular-nums;
 
