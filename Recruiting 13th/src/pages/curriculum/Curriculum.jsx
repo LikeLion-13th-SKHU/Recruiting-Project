@@ -10,6 +10,10 @@ const tracks = [
     name: "백엔드",
     content: <img src="/images/backend.png" />,
   },
+  {
+    name: "AI",
+    content: <img src="/images/ai.png" />,
+  },
 ];
 
 const Curriculum = () => {
