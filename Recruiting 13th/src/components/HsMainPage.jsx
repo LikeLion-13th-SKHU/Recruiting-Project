@@ -159,7 +159,7 @@ const MainImage = styled.img`
 
 const HsMainPage = () => {
   const releaseDate = useMemo(() => new Date("2025-02-25T00:00:00"), []);
-  const deadlineDate = useMemo(() => new Date("2025-03-12T23:59:59"), []);
+  const deadlineDate = useMemo(() => new Date("2025-03-15T23:59:59"), []);
 
   // 현재 시간이 2월 25일 이전인지 확인
   const now = new Date();
@@ -209,7 +209,7 @@ const HsMainPage = () => {
         </ApplyDiv>
         <Timer>
           {isDeadlinePassed
-            ? "모집기한이 끝났습니다."
+            ? "추가모집 종료!"
             : `${timeLeft.days.toString().replace(/^0+/, "")}d 
        ${timeLeft.hours.toString().replace(/^0+/, "")}h 
        ${timeLeft.minutes.toString().replace(/^0+/, "")}m 
