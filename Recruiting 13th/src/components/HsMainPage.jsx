@@ -169,6 +169,8 @@ const HsMainPage = () => {
   const targetDate = isBeforeRelease ? releaseDate : deadlineDate;
   const timeLeft = useCountdown(targetDate);
 
+  const isDeadlinePassed = now > deadlineDate;
+
   const handleClick = () => {
     if (now < releaseDate || now > deadlineDate) {
       alert("지원 기간이 아닙니다.");
@@ -186,10 +188,7 @@ const HsMainPage = () => {
           <br /> 사자처럼
           <MainPageUnivName>SKHU</MainPageUnivName>
         </MainPageTitle>
-        <MainImage
-          src='/images/3D사자 1.png'
-          alt='사진없음'
-        />
+        <MainImage src="/images/3D사자 1.png" alt="사진없음" />
       </MainContent>
 
       <ApplyContainer>
@@ -204,14 +203,17 @@ const HsMainPage = () => {
               now < releaseDate || now > deadlineDate
                 ? "not-allowed"
                 : "pointer",
-          }}>
+          }}
+        >
           <ApplyDivLetter>13기 지원하기!</ApplyDivLetter>
         </ApplyDiv>
         <Timer>
-          {timeLeft.days.toString().replace(/^0+/, "")}d{" "}
-          {timeLeft.hours.toString().replace(/^0+/, "")}h{" "}
-          {timeLeft.minutes.toString().replace(/^0+/, "")}m{" "}
-          {timeLeft.seconds.toString().replace(/^0+/, "")}s
+          {isDeadlinePassed
+            ? "모집기한이 끝났습니다."
+            : `${timeLeft.days.toString().replace(/^0+/, "")}d 
+       ${timeLeft.hours.toString().replace(/^0+/, "")}h 
+       ${timeLeft.minutes.toString().replace(/^0+/, "")}m 
+       ${timeLeft.seconds.toString().replace(/^0+/, "")}s`}
         </Timer>
       </ApplyContainer>
     </MainPageContainer>
